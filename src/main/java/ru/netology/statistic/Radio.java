@@ -1,14 +1,31 @@
 package ru.netology.statistic;
 
 public class Radio {
+private int radiostations = 10;
+
     private int numberRadiostation;
     private int soundVolume;
+    private int minNumberradiostation = 0;
+    private int maxNumberradiostation = 9;
+    private int minSoundvolume = 0;
+    private int maxSoundvolume = 100;
 
+
+    public Radio(int radiostations){
+this.radiostations = radiostations;
+   }
+
+    public int getRadiostations() {
+        return radiostations;
+    }
+    public Radio(){
+
+    }
     public void setNumberRadiostation(int numberRadiostation) {
-        if (numberRadiostation < 0) {
+        if (numberRadiostation < minNumberradiostation) {
             return;
         }
-        if (numberRadiostation > 9) {
+        if (numberRadiostation > maxNumberradiostation) {
             return;
         }
         this.numberRadiostation = numberRadiostation;
@@ -19,10 +36,10 @@ public class Radio {
     }
 
     public void setSoundVolume(int soundVolume) {
-        if (soundVolume < 0) {
+        if (soundVolume < minSoundvolume) {
             return;
         }
-        if (soundVolume > 10) {
+        if (soundVolume > maxSoundvolume) {
             return;
         }
         this.soundVolume = soundVolume;
@@ -33,23 +50,23 @@ public class Radio {
     }
 
     public void increaseVolume() {
-        if (soundVolume < 10) {
+        if (soundVolume < maxSoundvolume) {
             soundVolume = soundVolume + 1;
         }
     }
 
     public void decreaseVolume() {
-        if (soundVolume > 0) {
+        if (soundVolume > minSoundvolume) {
             soundVolume = soundVolume - 1;
         }
     }
 
     public void next() {
-        if (numberRadiostation < 9) {
+        if (numberRadiostation < maxNumberradiostation) {
             numberRadiostation = numberRadiostation + 1;
 
         } else {
-            numberRadiostation = 0;
+            numberRadiostation = minNumberradiostation;
 
 
         }
@@ -59,18 +76,18 @@ public class Radio {
 
 
     public void prev() {
-        if (numberRadiostation > 0) {
+        if (numberRadiostation > minNumberradiostation) {
             numberRadiostation = numberRadiostation - 1;
 
-        } else  {
-            numberRadiostation = 9;
+        } else {
+            numberRadiostation = maxNumberradiostation;
 
 
         }
 
     }
 
-    }
+}
 
 
 
