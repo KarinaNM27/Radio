@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class RadioTest {
     Radio radio = new Radio();
 
+
     @Test
     void findMinnumber() {
 
@@ -117,6 +118,7 @@ public class RadioTest {
     void findPrevvolume() {
 
         radio.setSoundVolume(0);
+
         radio.decreaseVolume();
         int actual = radio.getSoundVolume();
 
