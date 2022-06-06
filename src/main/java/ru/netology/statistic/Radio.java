@@ -1,31 +1,33 @@
 package ru.netology.statistic;
 
 public class Radio {
-private int radiostations = 10;
+    private int radiostations = 10;
 
     private int numberRadiostation;
     private int soundVolume;
-    private int minNumberradiostation = 0;
-    private int maxNumberradiostation = 9;
-    private int minSoundvolume = 0;
-    private int maxSoundvolume = 100;
+    private int minNumberRadiostation = 0;
+    private int maxNumberRadiostation = 9;
+    private int minSoundVolume = 0;
+    private int maxSoundVolume = 100;
 
 
-    public Radio(int radiostations){
-this.radiostations = radiostations;
-   }
+    public Radio(int radiostations) {
+        this.radiostations = radiostations;
+    }
 
     public int getRadiostations() {
         return radiostations;
     }
-    public Radio(){
+
+    public Radio() {
 
     }
+
     public void setNumberRadiostation(int numberRadiostation) {
-        if (numberRadiostation < minNumberradiostation) {
+        if (numberRadiostation < minNumberRadiostation) {
             return;
         }
-        if (numberRadiostation > maxNumberradiostation) {
+        if (numberRadiostation > maxNumberRadiostation) {
             return;
         }
         this.numberRadiostation = numberRadiostation;
@@ -36,10 +38,10 @@ this.radiostations = radiostations;
     }
 
     public void setSoundVolume(int soundVolume) {
-        if (soundVolume < minSoundvolume) {
+        if (soundVolume < minSoundVolume) {
             return;
         }
-        if (soundVolume > maxSoundvolume) {
+        if (soundVolume > maxSoundVolume) {
             return;
         }
         this.soundVolume = soundVolume;
@@ -50,23 +52,23 @@ this.radiostations = radiostations;
     }
 
     public void increaseVolume() {
-        if (soundVolume < maxSoundvolume) {
+        if (soundVolume < maxSoundVolume) {
             soundVolume = soundVolume + 1;
         }
     }
 
     public void decreaseVolume() {
-        if (soundVolume > minSoundvolume) {
+        if (soundVolume > minSoundVolume) {
             soundVolume = soundVolume - 1;
         }
     }
 
     public void next() {
-        if (numberRadiostation < maxNumberradiostation) {
+        if (numberRadiostation < maxNumberRadiostation) {
             numberRadiostation = numberRadiostation + 1;
 
         } else {
-            numberRadiostation = minNumberradiostation;
+            numberRadiostation = minNumberRadiostation;
 
 
         }
@@ -76,11 +78,11 @@ this.radiostations = radiostations;
 
 
     public void prev() {
-        if (numberRadiostation > minNumberradiostation) {
+        if (numberRadiostation > minNumberRadiostation) {
             numberRadiostation = numberRadiostation - 1;
 
         } else {
-            numberRadiostation = maxNumberradiostation;
+            numberRadiostation = maxNumberRadiostation;
 
 
         }
