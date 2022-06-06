@@ -1,5 +1,15 @@
 package ru.netology.statistic;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+
+
 public class Radio {
     private int radiostations = 10;
 
@@ -11,23 +21,10 @@ public class Radio {
     private int maxSoundVolume = 100;
 
 
-
-
-    public void setRadiostations(int radiostations) {
-        this.radiostations = radiostations;
-    }
-
-    public int getRadiostations() {
-        return radiostations;
-    }
-
-    public Radio() {
-
-    }
-
     public Radio(int radiostations) {
         this.radiostations = radiostations;
     }
+
 
     public void setNumberRadiostation(int numberRadiostation) {
         if (numberRadiostation < minNumberRadiostation) {
@@ -39,9 +36,6 @@ public class Radio {
         this.numberRadiostation = numberRadiostation;
     }
 
-    public int getNumberRadiostation() {
-        return numberRadiostation;
-    }
 
     public void setSoundVolume(int soundVolume) {
         if (soundVolume < minSoundVolume) {
@@ -53,9 +47,6 @@ public class Radio {
         this.soundVolume = soundVolume;
     }
 
-    public int getSoundVolume() {
-        return soundVolume;
-    }
 
     public void increaseVolume() {
         if (soundVolume < maxSoundVolume) {
@@ -96,12 +87,3 @@ public class Radio {
     }
 
 }
-
-
-
-
-
-
-
-
-

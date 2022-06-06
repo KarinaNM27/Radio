@@ -16,8 +16,9 @@ public class RadioTest {
         assertEquals(15, actual);
     }
 
+
     @Test
-    void findMinNumber() {
+    void findMinnumber() {
 
         radio.setNumberRadiostation(-1);
         int actual = radio.getNumberRadiostation();
@@ -27,7 +28,7 @@ public class RadioTest {
     }
 
     @Test
-    void findMaxNumber() {
+    void findMaxnumber() {
 
         radio.setNumberRadiostation(10);
         int actual = radio.getNumberRadiostation();
@@ -37,7 +38,7 @@ public class RadioTest {
     }
 
     @Test
-    void findMinVolume() {
+    void findMinvolume() {
 
         radio.setSoundVolume(-1);
         int actual = radio.getSoundVolume();
@@ -47,7 +48,7 @@ public class RadioTest {
     }
 
     @Test
-    void findMaxVolume() {
+    void findMaxvolume() {
 
         radio.setSoundVolume(101);
         int actual = radio.getSoundVolume();
@@ -57,7 +58,7 @@ public class RadioTest {
     }
 
     @Test
-    void findNextNumber() {
+    void findNextnumber() {
 
         radio.setNumberRadiostation(9);
         radio.next();
@@ -68,7 +69,7 @@ public class RadioTest {
     }
 
     @Test
-    void findNextNumber1() {
+    void findNextnumber1() {
 
         radio.setNumberRadiostation(8);
         radio.next();
@@ -79,7 +80,7 @@ public class RadioTest {
     }
 
     @Test
-    void findPrevNumber() {
+    void findPrevnumber() {
 
         radio.setNumberRadiostation(0);
         radio.prev();
@@ -90,7 +91,7 @@ public class RadioTest {
     }
 
     @Test
-    void findPrevNumber1() {
+    void findPrevnumber1() {
 
         radio.setNumberRadiostation(1);
         radio.prev();
@@ -101,7 +102,7 @@ public class RadioTest {
     }
 
     @Test
-    void findNextVolume() {
+    void findNextvolume() {
 
         radio.setSoundVolume(100);
         radio.increaseVolume();
@@ -112,7 +113,7 @@ public class RadioTest {
     }
 
     @Test
-    void findNextVolume1() {
+    void findNextvolume1() {
 
         radio.setSoundVolume(99);
         radio.increaseVolume();
@@ -123,9 +124,10 @@ public class RadioTest {
     }
 
     @Test
-    void findPrevVolume() {
+    void findPrevvolume() {
 
         radio.setSoundVolume(0);
+
         radio.decreaseVolume();
         int actual = radio.getSoundVolume();
 
@@ -134,7 +136,7 @@ public class RadioTest {
     }
 
     @Test
-    void findPrevVolume1() {
+    void findPrevvolume1() {
 
         radio.setSoundVolume(1);
         radio.decreaseVolume();
