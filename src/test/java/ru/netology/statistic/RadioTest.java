@@ -8,6 +8,15 @@ public class RadioTest {
     Radio radio = new Radio();
 
     @Test
+    void findRadiostations1() {
+
+        radio.setRadiostations(15);
+        int actual = radio.getRadiostations();
+
+        assertEquals(15, actual);
+    }
+
+    @Test
     void findMinNumber() {
 
         radio.setNumberRadiostation(-1);

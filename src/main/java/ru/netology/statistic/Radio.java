@@ -11,7 +11,9 @@ public class Radio {
     private int maxSoundVolume = 100;
 
 
-    public Radio(int radiostations) {
+
+
+    public void setRadiostations(int radiostations) {
         this.radiostations = radiostations;
     }
 
@@ -21,6 +23,10 @@ public class Radio {
 
     public Radio() {
 
+    }
+
+    public Radio(int radiostations) {
+        this.radiostations = radiostations;
     }
 
     public void setNumberRadiostation(int numberRadiostation) {
