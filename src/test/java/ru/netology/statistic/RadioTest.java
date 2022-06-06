@@ -1,3 +1,5 @@
+
+
 package ru.netology.statistic;
 
 import org.junit.jupiter.api.Test;
@@ -8,7 +10,7 @@ public class RadioTest {
     Radio radio = new Radio();
 
     @Test
-    void findRadiostations() {
+    void findRadiostations1() {
 
         radio.setRadiostations(15);
         int actual = radio.getRadiostations();
@@ -126,6 +128,7 @@ public class RadioTest {
     void findPrevvolume() {
 
         radio.setSoundVolume(0);
+
         radio.decreaseVolume();
         int actual = radio.getSoundVolume();
 
@@ -145,7 +148,7 @@ public class RadioTest {
     }
 
     @Test
-    void findRadiostations1() {
+    void findRadiostations() {
 
         Radio radio1 = new Radio(30);
 
