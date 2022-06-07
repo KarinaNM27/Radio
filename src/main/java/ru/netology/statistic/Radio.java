@@ -21,10 +21,9 @@ public class Radio {
     private int maxSoundVolume = 100;
 
 
-    public Radio(int radiostations){
+    public Radio(int radiostations) {
         this.radiostations = radiostations;
     }
-
 
 
     public void setNumberRadiostation(int numberRadiostation) {
@@ -38,7 +37,6 @@ public class Radio {
     }
 
 
-
     public void setSoundVolume(int soundVolume) {
         if (soundVolume < minSoundVolume) {
             return;
@@ -48,7 +46,6 @@ public class Radio {
         }
         this.soundVolume = soundVolume;
     }
-
 
 
     public void increaseVolume() {
