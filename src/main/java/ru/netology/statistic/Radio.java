@@ -6,7 +6,7 @@ public class Radio {
     private int numberRadiostation;
     private int soundVolume;
     private int minNumberRadiostation = 0;
-    private int maxNumberRadiostation = 9;
+    private int maxNumberRadiostation = radiostations - 1;
     private int minSoundvolume = 0;
     private int maxSoundvolume = 100;
 
@@ -19,14 +19,6 @@ public class Radio {
         return radiostations;
     }
 
-    public Radio() {
-
-    }
-
-    public Radio(int numberRadiostation) {
-        this.radiostations = 20;
-        this.numberRadiostation = numberRadiostation;
-    }
 
     public void setNumberRadiostation(int numberRadiostation) {
         if (numberRadiostation < minNumberRadiostation) {
@@ -40,6 +32,15 @@ public class Radio {
 
     public int getNumberRadiostation() {
         return numberRadiostation;
+    }
+
+    public Radio() {
+
+    }
+
+    public Radio(int radiostations) {
+        this.radiostations = radiostations;
+        this.maxNumberRadiostation = radiostations - 1;
     }
 
     public void setSoundVolume(int soundVolume) {

@@ -147,7 +147,8 @@ public class RadioTest {
     @Test
     void findNumberRadiostations1() {
 
-        Radio radio1 = new Radio(15);
+        Radio radio1 = new Radio(20);
+        radio1.setNumberRadiostation(15);
         assertEquals(15, radio1.getNumberRadiostation());
 
     }
