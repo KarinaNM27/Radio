@@ -10,10 +10,10 @@ public class RadioTest {
     @Test
     void findRadiostations() {
 
-        radio.setNumberRadiostation(15);
+        radio.setRadiostations(20);
         int actual = radio.getRadiostations();
 
-        assertEquals(10, actual);
+        assertEquals(20, actual);
     }
 
     @Test
@@ -145,12 +145,10 @@ public class RadioTest {
     }
 
     @Test
-    void findRadiostations1() {
+    void findNumberRadiostations1() {
 
-        Radio radio1 = new Radio(30);
-
-
-        assertEquals(30, radio1.getRadiostations());
+        Radio radio1 = new Radio(15);
+        assertEquals(15, radio1.getNumberRadiostation());
 
     }
 

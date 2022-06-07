@@ -23,8 +23,9 @@ public class Radio {
 
     }
 
-    public Radio(int radiostations) {
-        this.radiostations = radiostations;
+    public Radio(int numberRadiostation) {
+        this.radiostations = 20;
+        this.numberRadiostation = numberRadiostation;
     }
 
     public void setNumberRadiostation(int numberRadiostation) {
