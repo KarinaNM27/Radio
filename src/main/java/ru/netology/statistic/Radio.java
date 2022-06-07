@@ -1,55 +1,71 @@
 package ru.netology.statistic;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+
+
 public class Radio {
+    private int radiostations = 10;
+
     private int numberRadiostation;
     private int soundVolume;
+    private int minNumberRadiostation = 0;
+    private int maxNumberRadiostation = 9;
+    private int minSoundVolume = 0;
+    private int maxSoundVolume = 100;
+
+
+    public Radio(int radiostations) {
+        this.radiostations = radiostations;
+    }
+
 
     public void setNumberRadiostation(int numberRadiostation) {
-        if (numberRadiostation < 0) {
+        if (numberRadiostation < minNumberRadiostation) {
             return;
         }
-        if (numberRadiostation > 9) {
+        if (numberRadiostation > maxNumberRadiostation) {
             return;
         }
         this.numberRadiostation = numberRadiostation;
     }
 
-    public int getNumberRadiostation() {
-        return numberRadiostation;
-    }
 
     public void setSoundVolume(int soundVolume) {
-        if (soundVolume < 0) {
+        if (soundVolume < minSoundVolume) {
             return;
         }
-        if (soundVolume > 10) {
+        if (soundVolume > maxSoundVolume) {
             return;
         }
         this.soundVolume = soundVolume;
     }
 
-    public int getSoundVolume() {
-        return soundVolume;
-    }
 
     public void increaseVolume() {
-        if (soundVolume < 10) {
+        if (soundVolume < maxSoundVolume) {
             soundVolume = soundVolume + 1;
         }
     }
 
     public void decreaseVolume() {
-        if (soundVolume > 0) {
+        if (soundVolume > minSoundVolume) {
             soundVolume = soundVolume - 1;
         }
     }
 
     public void next() {
-        if (numberRadiostation < 9) {
+        if (numberRadiostation < maxNumberRadiostation) {
             numberRadiostation = numberRadiostation + 1;
 
         } else {
-            numberRadiostation = 0;
+            numberRadiostation = minNumberRadiostation;
 
 
         }
@@ -59,24 +75,15 @@ public class Radio {
 
 
     public void prev() {
-        if (numberRadiostation > 0) {
+        if (numberRadiostation > minNumberRadiostation) {
             numberRadiostation = numberRadiostation - 1;
 
-        } else  {
-            numberRadiostation = 9;
+        } else {
+            numberRadiostation = maxNumberRadiostation;
 
 
         }
 
     }
 
-    }
-
-
-
-
-
-
-
-
-
+}
