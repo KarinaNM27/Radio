@@ -145,7 +145,7 @@ public class RadioTest {
     }
 
     @Test
-    void findRadiostations2() {
+    void findRadiostations3() {
 
         Radio radio1 = new Radio(30);
 
