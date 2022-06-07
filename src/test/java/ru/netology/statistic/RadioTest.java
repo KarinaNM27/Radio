@@ -1,5 +1,3 @@
-
-
 package ru.netology.statistic;
 
 import org.junit.jupiter.api.Test;
@@ -128,7 +126,6 @@ public class RadioTest {
     void findPrevVolume() {
 
         radio.setSoundVolume(0);
-
         radio.decreaseVolume();
         int actual = radio.getSoundVolume();
 

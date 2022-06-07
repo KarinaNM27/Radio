@@ -1,15 +1,5 @@
 package ru.netology.statistic;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
-
-
 public class Radio {
     private int radiostations = 10;
 
@@ -17,14 +7,25 @@ public class Radio {
     private int soundVolume;
     private int minNumberRadiostation = 0;
     private int maxNumberRadiostation = 9;
-    private int minSoundVolume = 0;
-    private int maxSoundVolume = 100;
+    private int minSoundvolume = 0;
+    private int maxSoundvolume = 100;
 
+
+    public void setRadiostations(int radiostations) {
+        this.radiostations = radiostations;
+    }
+
+    public int getRadiostations() {
+        return radiostations;
+    }
+
+    public Radio() {
+
+    }
 
     public Radio(int radiostations) {
         this.radiostations = radiostations;
     }
-
 
     public void setNumberRadiostation(int numberRadiostation) {
         if (numberRadiostation < minNumberRadiostation) {
@@ -36,26 +37,32 @@ public class Radio {
         this.numberRadiostation = numberRadiostation;
     }
 
+    public int getNumberRadiostation() {
+        return numberRadiostation;
+    }
 
     public void setSoundVolume(int soundVolume) {
-        if (soundVolume < minSoundVolume) {
+        if (soundVolume < minSoundvolume) {
             return;
         }
-        if (soundVolume > maxSoundVolume) {
+        if (soundVolume > maxSoundvolume) {
             return;
         }
         this.soundVolume = soundVolume;
     }
 
+    public int getSoundVolume() {
+        return soundVolume;
+    }
 
     public void increaseVolume() {
-        if (soundVolume < maxSoundVolume) {
+        if (soundVolume < maxSoundvolume) {
             soundVolume = soundVolume + 1;
         }
     }
 
     public void decreaseVolume() {
-        if (soundVolume > minSoundVolume) {
+        if (soundVolume > minSoundvolume) {
             soundVolume = soundVolume - 1;
         }
     }
@@ -85,5 +92,15 @@ public class Radio {
         }
 
     }
-
 }
+
+
+
+
+
+
+
+
+
+
+
